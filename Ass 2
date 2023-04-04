@@ -1,0 +1,21 @@
+# Get user inputs
+grade = input("Enter the Grade: ")
+salary = float(input("Enter the Salary: "))
+
+# Calculate bonus based on grade
+if grade == 'A':
+    bonus = 0.05 * salary
+elif grade == 'B':
+    bonus = 0.1 * salary
+else:
+    print("Invalid grade entered")
+    exit()
+
+# Check if salary is less than $10,000 and add extra 2% bonus
+if salary < 10000:
+    bonus += 0.02 * salary
+
+# Calculate total salary and print output
+total_salary = salary + bonus
+print("Bonus=", bonus)
+print("Total salary", total_salary)

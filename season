@@ -1,0 +1,31 @@
+# Get user input for month and date
+month = input("Enter the month: ")
+date = int(input("Enter the date: "))
+
+# Determine the season based on the input
+if month.lower() == 'mar':
+    if date >= 20:
+        season = "Summer"
+    else:
+        season = "Winter"
+elif month.lower() == 'jun':
+    if date >= 21:
+        season = "Spring"
+    else:
+        season = "Summer"
+elif month.lower() == 'sep':
+    if date >= 22:
+        season = "Fall"
+    else:
+        season = "Summer"
+elif month.lower() == 'dec':
+    if date >= 21:
+        season = "Winter"
+    else:
+        season = "Fall"
+else:
+    print("Invalid input")
+    exit()
+
+# Print the season
+print("The season is currently", season)
