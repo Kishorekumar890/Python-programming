@@ -1,0 +1,65 @@
+Assignment 3.1:
+
+word = input("Enter a word: ").lower()
+
+vowels = []
+consonants = []
+
+for letter in word:
+    if letter in 'aeiou':
+        vowels.append(letter)
+    else:
+        consonants.append(letter)
+
+vowels.sort()
+consonants.sort()
+
+print("Vowels:", vowels)
+print("Consonants:", consonants)
+
+if len(vowels) > len(consonants):
+    print("Maximum: Vowels")
+elif len(vowels) < len(consonants):
+    print("Maximum: Consonants")
+else:
+    print("Equal")
+
+Assignment 3.2:
+
+def length_of_last_word(s: str) -> int:
+    s = s.rstrip()
+    words = s.split(" ")
+    for i in range(len(words) - 1, -1, -1):
+        if words[i]:
+            return len(words[i])
+    return 0
+    
+Assignment 3.3:
+
+n = int(input("Enter a number: "))
+r_str = str(n)[::-1]
+r = int(r_str)
+print("Reversed number:", r)
+
+Assignment 3.4:
+
+def delchar(s: str, c: str) -> str:
+    if len(c) != 1:
+        return s
+    return "".join([char for char in s if char != c])
+
+Assignment 3.5:
+
+def string_concat(s1: str, s2: str) -> str:
+    return s1 + s2
+def string_replace(s: str, old: str, new: str) -> str:
+    return s.replace(old, new)
+def string_uppercase(s: str) -> str:
+    return s.upper()
+def count_vowels(s: str) -> int:
+    vowels = set("aeiouAEIOU")
+    count = 0
+    for char in s:
+        if char in vowels:
+            count += 1
+    return count
